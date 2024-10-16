@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="333.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" prefWidth="339.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="298.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="339.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="484.0" minHeight="0.0" prefHeight="75.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="771.0" minHeight="10.0" prefHeight="298.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="679.0" minHeight="10.0" prefHeight="196.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="478.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="GenerateButton" mnemonicParsing="false" onAction="#onGenerateClick" text="Générer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <VBox maxHeight="-Infinity" maxWidth="150.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Force" />
+                  <TextField fx:id="ForceField" prefHeight="26.0" prefWidth="25.0" promptText="9" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Intelligence" />
+                  <TextField fx:id="IntField" prefHeight="26.0" prefWidth="25.0" promptText="9" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Destérité" />
+                  <TextField fx:id="DextField" prefHeight="26.0" prefWidth="25.0" promptText="9" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Sagesse" />
+                  <TextField fx:id="WisdomField" prefHeight="26.0" prefWidth="25.0" promptText="9" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="100.0" text="Constitution" />
+                  <TextField fx:id="ConstField" prefWidth="25.0" promptText="9" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="100.0" text="Charisme" />
+                  <TextField fx:id="CharField" prefWidth="25.0" promptText="9" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="Image" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <image>
+            <Image url="@imgs/avatar.png" />
+         </image></ImageView>
+      <ComboBox fx:id="EthnieCombo" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="15.0" />
+         </GridPane.margin></ComboBox>
+      <ComboBox fx:id="SettingCombo" onAction="#onSettingChange" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="25.0" />
+         </GridPane.margin>
+      </ComboBox>
+      <ComboBox fx:id="ClassCombo" onAction="#onClassChange" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="15.0" />
+         </GridPane.margin></ComboBox>
+      <Label text="Ethnie" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+      <Label text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+      <Label alignment="CENTER" prefHeight="18.0" prefWidth="56.0" text="Classe" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+      <ImageView fx:id="Image1" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <image>
+            <Image url="@imgs/6e98f3f46c436402714563555955db9cd5418c53.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ClassImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <image>
+            <Image url="@imgs/classes/Artilleur.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</GridPane>
